@@ -22,7 +22,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install python-telegram-bot
-      working-directory: ./path-to-your-code
+      working-directory: ${{ github.workspace }}  # Sử dụng thư mục làm việc mặc định của GitHub
 
     - name: Run bot
       env:
