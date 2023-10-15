@@ -1,8 +1,10 @@
+import os
 import telebot
 
-# Replace 'YOUR_BOT_TOKEN' with the actual token you received from BotFather
-bot = telebot.TeleBot('6437953172:AAEt8WJIHR2M4Io6yaQhFauE7rXVGMIjnGU')
+# Đọc token từ biến môi trường
+token = os.environ['BOT_TOKEN']
 
+bot = telebot.TeleBot(token)
 # Danh sách các từ khóa
 keywords = ["dns", "config", "help", "info"]  # Thêm các từ khóa khác nếu cần
 
