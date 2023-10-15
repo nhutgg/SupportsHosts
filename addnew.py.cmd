@@ -2,7 +2,7 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Thay thế 'YOUR_BOT_TOKEN' bằng token thực tế bạn nhận được từ BotFather
-bot = telebot.TeleBot('6638592020:AAFm2o5RcIYzkMrwMkseil7recf9zWXjYnQ')
+bot = telebot.TeleBot('xxx')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
