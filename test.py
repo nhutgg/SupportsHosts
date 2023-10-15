@@ -46,4 +46,5 @@ def echo_all(message):
     # Nếu không tìm thấy từ khóa nào, bot sẽ phản hồi mặc định
     #bot.reply_to(message, "Xin lỗi, không tìm thấy thông tin liên quan đến yêu cầu của bạn.")
 
-bot.polling()
+bot.polling(timeout=60)
+
