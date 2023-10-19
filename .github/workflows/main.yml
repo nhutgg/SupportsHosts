@@ -19,9 +19,9 @@ jobs:
         python-version: 3.x
 
     - name: Install telebot library
-      run: pip install telebot
+      run: pip install pyTelegramBotAPI
 
     - name: Run your bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-      run: python test.py
+      run: python bot.py
