@@ -5,8 +5,6 @@ import telebot
 token = os.environ['BOT_TOKEN']
 
 bot = telebot.TeleBot(token)
-# Danh sách các từ khóa
-keywords = ["dns", "config", "help", "info"]  # Thêm các từ khóa khác nếu cần
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -30,21 +28,10 @@ def echo_all(message):
                 """
                 bot.reply_to(message, reply_text)
                 return
-            elif keyword == "config":
-                # Phản hồi với thông tin cấu hình DNS
-                bot.reply_to(message, "Thông tin cấu hình DNS...")
-                return
-            elif keyword == "help":
-                # Phản hồi với hướng dẫn sử dụng
-                bot.reply_to(message, "Hướng dẫn sử dụng...")
-                return
-            elif keyword == "info":
-                # Phản hồi với thông tin khác
-                bot.reply_to(message, "Thông tin khác...")
-                return
+            # Các trường hợp xử lý khác ở đây
 
-    # Nếu không tìm thấy từ khóa nào, bot sẽ phản hồi mặc định
-    #bot.reply_to(message, "Xin lỗi, không tìm thấy thông tin liên quan đến yêu cầu của bạn.")
+# Xác định danh sách từ khóa
+keywords = ["dns", "config", "help", "info"]
 
-bot.polling(timeout=60)
-
+if __name__ == '__main__':
+    bot.polling(none_stop=True)
